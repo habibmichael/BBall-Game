@@ -3,10 +3,11 @@ using System.Collections;
 
 public class BallLauncher : MonoBehaviour {
 
-    public float ballSpeed = 5f;
+    public float ballSpeed = 15f;
    public  GameObject ballPrefab;
     GameObject ballInstance;
     Rigidbody rb;
+    Camera camera;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +20,15 @@ public class BallLauncher : MonoBehaviour {
         //Look for button click or left-ctrl
         if (Input.GetButtonDown("Fire1"))
         {
+           //Create Ball & Update Location
             ballInstance = Instantiate(ballPrefab);
-            ballInstance.transform.position = transform.position;
+            camera = GetComponentInChildren<Camera>();
+            ballInstance.transform.position = camera.transform.position;
+
+
             rb = ballInstance.GetComponent<Rigidbody>();
-            rb.velocity = Vector3.left * ballSpeed;
+            //Launch Ball in Direction Camera is Viewing
+            rb.velocity = (camera.transform.rotation * Vector3.forward) * ballSpeed;
         }
 	}
 }
