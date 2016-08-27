@@ -4,13 +4,13 @@ using System.Collections;
 public class ScoreKeeper : MonoBehaviour
 {
 
-   public  int score;
+   public  int score=0;
 
     // Use this for initialization
     void Start ()
     {
 
-        score = 0;
+        DontDestroyOnLoad(gameObject);
     }
 
 
