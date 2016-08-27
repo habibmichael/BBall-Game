@@ -17,7 +17,7 @@ public class TimeRemaining : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        text.text = "Time Remaining: " + levelManager.timeTillNextLevel;
+        text.text = "Time Remaining: " + (int)levelManager.timeTillNextLevel;
 	
 
 	}

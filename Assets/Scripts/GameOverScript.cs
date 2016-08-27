@@ -9,14 +9,16 @@ public class GameOverScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        text = GetComponent<Text>();
-        absorber = FindObjectOfType<ScoreAbsorber>();
-        text.text = "Score: " + absorber.score;
+       
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () { 
+
+         text = GetComponent<Text>();
+        absorber = FindObjectOfType<ScoreAbsorber>();
+        text.text = "Score: " + absorber.score;
 	
 	}
 }
