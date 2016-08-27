@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-   public  float timeTillNextLevel = 5.0f;
+   public  float timeTillNextLevel = 10.0f;
 
     public void loadNextScene ()
     {
@@ -20,15 +20,15 @@ public class LevelManager : MonoBehaviour {
 
     void Update ()
     {
-        if (timeTillNextLevel > 0)
-        {
+     //   if (timeTillNextLevel > 0)
+     //   {
             timeTillNextLevel -= Time.deltaTime;
 
-            if (timeTillNextLevel < 0)
-            {
-                loadNextScene();
-            }
-        }
+     //       if (timeTillNextLevel < 0)
+      //      {
+          //      loadNextScene();
+        //    }
+      //  }
     }
 
 

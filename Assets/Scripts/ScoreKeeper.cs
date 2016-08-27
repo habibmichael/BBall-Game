@@ -4,7 +4,7 @@ using System.Collections;
 public class ScoreKeeper : MonoBehaviour
 {
 
-    int score;
+   public  int score;
 
     // Use this for initialization
     void Start ()
